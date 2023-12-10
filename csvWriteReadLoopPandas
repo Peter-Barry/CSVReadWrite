@@ -61,9 +61,6 @@ with open("myfile3.csv", "r", newline='') as csvfile:
         #add code to accum average here
         #add code to count the records here
 
-
-
-  
 ################## PANDAS ########################
 # open the file and read it all into one variable
 # Read the entire CSV file into a pandas DataFrame
