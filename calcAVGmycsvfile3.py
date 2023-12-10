@@ -25,6 +25,10 @@ print(row[1])  # Access the second column
 # Close the file
 csvfile.close()
 #print the average(s) here
+
+
+########################Loop thru file###################################
+#No need to close the file when using this "with open .....as csv file etc"
 """
 #alternative way of looping thru file
 #dont have to know what length or number of records
@@ -40,10 +44,20 @@ with open("myfile3.csv", "r", newline='') as csvfile:
         #add code to accum average here
         #add code to count the records here
 
-"""     
-
-
-
+################## PANDAS ########################
+# open the file and read it all into one variable
+# Read the entire CSV file into a pandas DataFrame
+# Calculate the Mean of each searate column by referring to the Column Heading
+df = pandas.read_csv('myfile3.csv')
+print(df.to_string())
+# Filter out the column, value_eur
+temp_values = df['Temp']
+mean_value_temp = round(statistics.mean(temp_values), 2)
+print("Mean Value Temp:", mean_value_temp)
+noise_values = df['Noise']
+mean_value_noise = round(statistics.mean(noise_values), 2)
+print("Mean Value Noise:", mean_value_noise)
+"""
 
 
 
