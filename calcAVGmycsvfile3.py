@@ -48,6 +48,7 @@ with open("myfile3.csv", "r", newline='') as csvfile:
 # open the file and read it all into one variable
 # Read the entire CSV file into a pandas DataFrame
 # Calculate the Mean of each searate column by referring to the Column Heading
+#DOES FILE NEED TO BE OPENED FIRTS???
 df = pandas.read_csv('myfile3.csv')
 print(df.to_string())
 # Filter out the column, value_eur
