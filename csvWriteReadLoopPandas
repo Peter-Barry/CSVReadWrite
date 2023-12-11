@@ -38,6 +38,7 @@ print("closed after printing rows")
 
 # open the file to append to it
 csvfile = open('myfile3.csv',"a", newline='')
+csvwriter = csv.writer(csvfile)
 csvwriter.writerow([20, 28])
 csvwriter.writerow([19, 10])
 csvfile.close()
