@@ -47,7 +47,7 @@ print("closed append")
 ################## LOOP ########################
 ########################Loop thru file###################################
 #No need to close the file when using this "with open .....as csv file etc"
-"""
+
 #alternative way of looping thru file
 #dont have to know what length or number of records
 dont have to close the file
@@ -61,7 +61,7 @@ with open("myfile3.csv", "r", newline='') as csvfile:
         print(row[1])
         #add code to accum average here
         #add code to count the records here
-
+"""
 ################## PANDAS ########################
 # open the file and read it all into one variable
 # Read the entire CSV file into a pandas DataFrame
@@ -76,3 +76,4 @@ print("Mean Value Temp:", mean_value_temp)
 noise_values = df['Noise']
 mean_value_noise = round(statistics.mean(noise_values), 2)
 print("Mean Value Noise:", mean_value_noise)
+"""
